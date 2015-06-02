@@ -2,6 +2,7 @@ $(document).ready(function() {
 	var App = Backbone.Router.extend({
 		routes: {
 			'': 'home',
+			'home': 'home',
 			'search/:query': 'search'
 		},
 
@@ -14,9 +15,8 @@ $(document).ready(function() {
 		search: function(query) {
 			$('.page').hide();
 			$('#search').show();
-			console.log('search', query);
+			console.log(query);
 		}
-
 	});
 
 	var myRouter = new App();
@@ -27,27 +27,26 @@ $(document).ready(function() {
 		e.preventDefault();
 		var query = $('#query').val();
 
+		function onReceivedMovies(movies) {
+			console.log(onReceivedMovies);
+			console.log(movies);
+			console.log(movies.Search[0].Title);
+		
+			for(var i=0;i<movies.Search.length;i++) {
+				console.log(movies.Search[i].Title);
+			}
+		}
+
+		$.get(
+			'http://www.omdbapi.com',
+			{
+				s: query,
+				type: 'movie'
+			},
+			onReceivedMovies,
+			'json'
+		);
+
 		myRouter.navigate('search/'+query, {trigger: true});
-
-		console.log(query);
-
-
 	});
-
-
-	function onReceivedMovies(movies) {
-		console.log(onReceivedMovies);
-		console.log(movies);
-		console.log(movies.Search[0].Title);
-	}
-
-	$.get(
-		'http://www.omdbapi.com',
-		{
-			s: 'lord of the rings',
-			type: 'movie'
-		},
-		onReceivedMovies,
-		'json'
-	);
 });
