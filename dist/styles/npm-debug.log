@@ -1,0 +1,242 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'jshint' ]
+2 info using npm@2.7.5
+3 info using node@v0.10.31
+4 silly cache add args [ 'jshint', null ]
+5 verbose cache add spec jshint
+6 silly cache add parsed spec { raw: 'jshint',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'jshint',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed jshint@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'jshint', range: '*', hasData: false }
+11 silly mapToRegistry name jshint
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/jshint
+15 verbose addNameRange registry:https://registry.npmjs.org/jshint not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/jshint
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 11:12:21
+19 verbose request id 5b96901c1f72f1f0
+20 verbose etag "E9UTPTTZUQ6BNIE6BMI78LEFN"
+21 http request GET https://registry.npmjs.org/jshint
+22 http 200 https://registry.npmjs.org/jshint
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"EJWJPZH0PFLH0MOK9KQ3S5JZI"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '100302',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Tue, 02 Jun 2015 16:12:22 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '21',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-dfw1822-DFW',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1433261542.387234,VS0,VE0',
+23 silly get     vary: 'Accept' } ]
+24 verbose get saving jshint to /Users/zchaney/.npm/registry.npmjs.org/jshint/.cache.json
+25 silly addNameRange number 2 { name: 'jshint', range: '*', hasData: true }
+26 silly addNameRange versions [ 'jshint',
+26 silly addNameRange   [ '0.1.8',
+26 silly addNameRange     '0.1.9',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.1',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.5.3',
+26 silly addNameRange     '0.5.4',
+26 silly addNameRange     '0.5.5',
+26 silly addNameRange     '0.5.6',
+26 silly addNameRange     '0.5.7',
+26 silly addNameRange     '0.5.8',
+26 silly addNameRange     '0.5.9',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.6.2',
+26 silly addNameRange     '0.6.3',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.9.1',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '2.0.0',
+26 silly addNameRange     '2.0.1',
+26 silly addNameRange     '2.1.0',
+26 silly addNameRange     '2.1.1',
+26 silly addNameRange     '2.1.2',
+26 silly addNameRange     '2.1.3',
+26 silly addNameRange     '2.1.4',
+26 silly addNameRange     '2.1.5',
+26 silly addNameRange     '2.1.6',
+26 silly addNameRange     '2.1.7',
+26 silly addNameRange     '2.1.8',
+26 silly addNameRange     '2.1.9',
+26 silly addNameRange     '2.1.10',
+26 silly addNameRange     '2.1.11',
+26 silly addNameRange     '2.2.0',
+26 silly addNameRange     '2.3.0',
+26 silly addNameRange     '2.4.0',
+26 silly addNameRange     '2.4.1',
+26 silly addNameRange     '2.4.2',
+26 silly addNameRange     '2.4.3',
+26 silly addNameRange     '2.4.4',
+26 silly addNameRange     '2.5.0',
+26 silly addNameRange     '2.5.1',
+26 silly addNameRange     '2.5.2',
+26 silly addNameRange     '2.5.3',
+26 silly addNameRange     '2.5.4',
+26 silly addNameRange     '2.5.5',
+26 silly addNameRange     '2.5.6',
+26 silly addNameRange     '2.5.7',
+26 silly addNameRange     '2.5.8',
+26 silly addNameRange     '2.5.9',
+26 silly addNameRange     '2.5.10',
+26 silly addNameRange     '2.5.11',
+26 silly addNameRange     '2.6.0',
+26 silly addNameRange     '2.6.1',
+26 silly addNameRange     '2.6.2',
+26 silly addNameRange     '2.6.3',
+26 silly addNameRange     '2.7.0',
+26 silly addNameRange     '2.8.0' ] ]
+27 verbose addNamed jshint@2.8.0
+28 silly addNamed semver.valid 2.8.0
+29 silly addNamed semver.validRange 2.8.0
+30 silly mapToRegistry name jshint
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/jshint
+34 verbose addRemoteTarball https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz',
+35 verbose addRemoteTarball   '1d09a3bd913c4cadfa81bf18d582bd85bffe0d44' ]
+36 info retry fetch attempt 1 at 11:12:22
+37 info attempt registry request try #1 at 11:12:22
+38 http fetch GET https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+39 http fetch 200 https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+40 silly fetchAndShaCheck shasum 1d09a3bd913c4cadfa81bf18d582bd85bffe0d44
+41 verbose addTmpTarball /var/folders/7l/xqx10gyj7zb1jqgjm4fz0x480000gn/T/npm-97177-f544688d/registry.npmjs.org/jshint/-/jshint-2.8.0.tgz not in flight; adding
+42 verbose addTmpTarball already have metadata; skipping unpack for jshint@2.8.0
+43 silly cache afterAdd jshint@2.8.0
+44 verbose afterAdd /Users/zchaney/.npm/jshint/2.8.0/package/package.json not in flight; writing
+45 verbose afterAdd /Users/zchaney/.npm/jshint/2.8.0/package/package.json written
+46 silly install resolved [ { name: 'jshint',
+46 silly install resolved     version: '2.8.0',
+46 silly install resolved     homepage: 'http://jshint.com/',
+46 silly install resolved     description: 'Static analysis tool for JavaScript',
+46 silly install resolved     author:
+46 silly install resolved      { name: 'Anton Kovalyov',
+46 silly install resolved        email: 'anton@kovalyov.net',
+46 silly install resolved        url: 'http://anton.kovalyov.net/' },
+46 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshint/jshint.git' },
+46 silly install resolved     bugs: { url: 'https://github.com/jshint/jshint/issues' },
+46 silly install resolved     bin: { jshint: './bin/jshint' },
+46 silly install resolved     scripts:
+46 silly install resolved      { build: 'node bin/build',
+46 silly install resolved        coverage: 'istanbul -- cover ./node_modules/.bin/nodeunit tests/unit',
+46 silly install resolved        data: 'node scripts/generate-identifier-data',
+46 silly install resolved        pretest: 'jshint src && jscs src',
+46 silly install resolved        test: 'nodeunit tests tests/regression tests/unit' },
+46 silly install resolved     main: './src/jshint.js',
+46 silly install resolved     dependencies:
+46 silly install resolved      { cli: '0.6.x',
+46 silly install resolved        'console-browserify': '1.1.x',
+46 silly install resolved        exit: '0.1.x',
+46 silly install resolved        htmlparser2: '3.8.x',
+46 silly install resolved        minimatch: '2.0.x',
+46 silly install resolved        shelljs: '0.3.x',
+46 silly install resolved        'strip-json-comments': '1.0.x',
+46 silly install resolved        lodash: '3.7.x' },
+46 silly install resolved     devDependencies:
+46 silly install resolved      { browserify: '9.x',
+46 silly install resolved        coveralls: '2.11.x',
+46 silly install resolved        istanbul: '0.3.x',
+46 silly install resolved        jscs: '1.11.x',
+46 silly install resolved        jshint: '2.6.x',
+46 silly install resolved        'mock-stdin': '0.3.x',
+46 silly install resolved        nodeunit: '0.9.x',
+46 silly install resolved        regenerate: '1.2.x',
+46 silly install resolved        sinon: '1.12.x',
+46 silly install resolved        'unicode-6.3.0': '0.1.x' },
+46 silly install resolved     license: '(MIT AND JSON)',
+46 silly install resolved     preferGlobal: true,
+46 silly install resolved     files: [ 'bin', 'data', 'dist', 'src' ],
+46 silly install resolved     gitHead: 'e6611af2d180bd2317d5762e85807a481de99ccb',
+46 silly install resolved     _id: 'jshint@2.8.0',
+46 silly install resolved     _shasum: '1d09a3bd913c4cadfa81bf18d582bd85bffe0d44',
+46 silly install resolved     _from: 'jshint@*',
+46 silly install resolved     _npmVersion: '2.6.0',
+46 silly install resolved     _nodeVersion: '0.12.0',
+46 silly install resolved     _npmUser: { name: 'jugglinmike', email: 'mike@mikepennisi.com' },
+46 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+46 silly install resolved     dist:
+46 silly install resolved      { shasum: '1d09a3bd913c4cadfa81bf18d582bd85bffe0d44',
+46 silly install resolved        tarball: 'http://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz' },
+46 silly install resolved     directories: {},
+46 silly install resolved     _resolved: 'https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz' } ]
+47 info install jshint@2.8.0 into /usr/local/lib
+48 info installOne jshint@2.8.0
+49 verbose installOne of jshint to /usr/local/lib not in flight; installing
+50 verbose lock using /Users/zchaney/.npm/_locks/jshint-60c9d5e162d557b6.lock for /usr/local/lib/node_modules/jshint
+51 silly install write writing jshint 2.8.0 to /usr/local/lib/node_modules/jshint
+52 silly cache addNamed cb jshint@2.8.0
+53 verbose unbuild lib/node_modules/jshint
+54 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged from base /usr/local
+55 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
+56 verbose tar unpack /Users/zchaney/.npm/jshint/2.8.0/package.tgz
+57 verbose tar unpacking to /usr/local/lib/node_modules/jshint
+58 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged
+59 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 error tar.unpack untar error /Users/zchaney/.npm/jshint/2.8.0/package.tgz
+62 verbose unlock done using /Users/zchaney/.npm/_locks/jshint-60c9d5e162d557b6.lock for /usr/local/lib/node_modules/jshint
+63 verbose fstream_path /usr/local/lib/node_modules/jshint
+64 verbose fstream_type Directory
+65 verbose fstream_class DirWriter
+66 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/jshint'
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+67 verbose fstream_stack Object.oncomplete (fs.js:107:15)
+68 verbose cwd /Users/zchaney/Projects/IronYard/day18/dist/styles
+69 error Darwin 14.3.0
+70 error argv "node" "/usr/local/bin/npm" "install" "-g" "jshint"
+71 error node v0.10.31
+72 error npm  v2.7.5
+73 error path /usr/local/lib/node_modules/jshint
+74 error code EACCES
+75 error errno 3
+76 error Error: EACCES, mkdir '/usr/local/lib/node_modules/jshint'
+76 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/jshint']
+76 error   errno: 3,
+76 error   code: 'EACCES',
+76 error   path: '/usr/local/lib/node_modules/jshint',
+76 error   fstream_type: 'Directory',
+76 error   fstream_path: '/usr/local/lib/node_modules/jshint',
+76 error   fstream_class: 'DirWriter',
+76 error   fstream_stack:
+76 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+76 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+76 error      'Object.oncomplete (fs.js:107:15)' ] }
+77 error Please try running this command again as root/Administrator.
+78 verbose exit [ 3, true ]
+79 verbose unbuild lib/node_modules/jshint
+80 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged from base /usr/local
+81 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
