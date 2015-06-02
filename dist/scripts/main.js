@@ -33,7 +33,12 @@ $(document).ready(function() {
 			console.log(movies.Search[0].Title);
 		
 			for(var i=0;i<movies.Search.length;i++) {
-				console.log(movies.Search[i].Title);
+				var movieSearch = movies.Search[i].Title;
+				
+				$('#search').html('<div>'+movieSearch+'</div>');
+
+
+				console.log(movieSearch);
 			}
 		}
 
