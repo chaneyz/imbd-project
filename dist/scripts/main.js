@@ -33,4 +33,21 @@ $(document).ready(function() {
 
 
 	});
+
+
+	function onReceivedMovies(movies) {
+		console.log(onReceivedMovies);
+		console.log(movies);
+		console.log(movies.Search[0].Title);
+	}
+
+	$.get(
+		'http://www.omdbapi.com',
+		{
+			s: 'lord of the rings',
+			type: 'movie'
+		},
+		onReceivedMovies,
+		'json'
+	);
 });
