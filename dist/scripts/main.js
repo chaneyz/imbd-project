@@ -26,6 +26,8 @@ $(document).ready(function() {
 	$('#search-form').on('submit', function(e) {
 		e.preventDefault();
 		var query = $('#query').val();
+		var movieSelection = '';
+
 
 		function onReceivedMovies(movies) {
 			console.log(onReceivedMovies);
@@ -34,11 +36,12 @@ $(document).ready(function() {
 		
 			for(var i=0;i<movies.Search.length;i++) {
 				var movieSearch = movies.Search[i].Title;
-				
-				$('#search').html('<div>'+movieSearch+'</div>');
-
 
 				console.log(movieSearch);
+
+				movieSelection += '<div class=movieList>'+movieSearch+'</div>';
+
+				$('#search').html(movieSelection);
 			}
 		}
 
