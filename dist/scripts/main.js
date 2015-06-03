@@ -3,20 +3,25 @@ $(document).ready(function() {
 		routes: {
 			'': 'home',
 			'home': 'home',
-			'search/:query': 'search'
+			'search/:query': 'search',
+			'search/new/:query': 'shitSearch'
 		},
 
 		home: function () {
-			console.log('home');
-			$('.page').hide();
+			$('#search').hide();
 			$('#home').show();
 		},
 
 		search: function(query) {
-			$('.page').hide();
+			$('#home').hide();
 			$('#search').show();
-			console.log(query);
+		},
+
+		shitSearch: function(query) {
+			$('#home').hide();
+			$('#search').show();
 		}
+
 	});
 
 	var myRouter = new App();
@@ -28,6 +33,11 @@ $(document).ready(function() {
 		var query = $('#query').val();
 		var movieSelection = '';
 
+		myRouter.navigate('search/'+query, {trigger: true});
+
+		var watchList = [];
+		var moviesToWatch = [];
+
 
 		function onReceivedMovies(movies) {
 			console.log(onReceivedMovies);
@@ -35,15 +45,70 @@ $(document).ready(function() {
 			console.log(movies.Search[0].Title);
 		
 			for(var i=0;i<movies.Search.length;i++) {
-				var movieSearch = movies.Search[i].Title;
-
-				console.log(movieSearch);
-
-				movieSelection += '<div class=movieList>'+movieSearch+'</div>';
-
-				$('#search').html(movieSelection);
+				var $movieSearch = $('<div>'+movies.Search[i].Title+'</div>');
+				watchList.push($movieSearch);
+				console.log(watchList);
 			}
-		}
+
+			$('#search').append(watchList);
+
+			for(var i=0; i<watchList.length; i++) {
+				watchList[i].on('click', function(e) {
+				moviesToWatch.push($(this));
+				$('#watch-list').append(moviesToWatch);
+				});
+
+				console.log(moviesToWatch);
+			}
+		};
+
+
+	$('#new-search-form').on('submit', function(e) {
+		e.preventDefault();
+		var query = $('#newQuery').val();
+		var movieSelection = '';
+
+		myRouter.navigate('search/new/'+query, {trigger: true});
+
+		var watchList = [];
+		var moviesToWatch = [];
+
+
+		function onReceivedMovies(movies) {
+			console.log(onReceivedMovies);
+			console.log(movies);
+			console.log(movies.Search[0].Title);
+		
+			for(var i=0;i<movies.Search.length;i++) {
+				var $movieSearch = $('<div>'+movies.Search[i].Title+'</div>');
+				watchList.push($movieSearch);
+				console.log(watchList);
+			}
+
+			$('#search').append(watchList);
+
+			for(var i=0; i<watchList.length; i++) {
+				watchList[i].on('click', function(e) {
+				moviesToWatch.push($(this));
+				$('#watch-list').append(moviesToWatch);
+				});
+
+				console.log(moviesToWatch);
+			}
+		};
+		
+
+
+
+
+
+
+
+
+
+
+
+
 
 		$.get(
 			'http://www.omdbapi.com',
@@ -54,7 +119,5 @@ $(document).ready(function() {
 			onReceivedMovies,
 			'json'
 		);
-
-		myRouter.navigate('search/'+query, {trigger: true});
 	});
 });
