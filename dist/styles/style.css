@@ -1,3 +1,36 @@
+.header {
+	background: #333333;
+	color: #CCCCCC;
+	text-align: center;
+	font: #000;
+	font-family: lato;
+}
+
+h1 {
+	text-align: center;
+}
+
 .page {
 	display: none;
+	text-align: center;
+}
+
+.centered {
+    text-align:center;
+}
+
+#watch-list {
+	text-align:center;
+}
+
+#query {
+	margin-bottom: 1em;
+}
+
+#newQuery {
+	margin-bottom: 1em;
+}
+
+.btn {
+	margin-bottom: 1em;
 }

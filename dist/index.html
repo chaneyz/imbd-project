@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 	<title></title>
 </head>
 <body>
+	<div class="container-fluid header" id="title">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    		<h1>IMBD Movie Search and Watch List</h1>
+    	</div>
+    </div>
 	<main>
-		<section class="page" id="home">
-			<h1>Home</h1>
-				<form id="search-form">
-					<input type="text" id="query">
-					<button type="submit">submit</button>
-				</form>
-		</section>
-		<section class="page" id="search">
-			<h1>Search Results</h1>
-				<form id="new-search-form">
-					<input type="text" id="newQuery">
-					<button type="submit">submit</button>
-				</form>
-		</section>
-		<section>
-			<h1>Watch List</h1>
-			<div>
-				<div id="watch-list"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<section class="page" id="home">
+					<h1>Search</h1>
+						<form id="search-form">
+							<input type="text" id="query" class="form-control input-lg" placeholder="Text input">
+							<button class="btn btn-danger btn-lg" type="submit">Submit</button>
+						</form>
+				</section>
 			</div>
-		</section>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<section class="page" id="search">
+					<h1>Search Results</h1>
+						<form id="new-search-form">
+							<input type="text" id="newQuery" class="form-control input-lg" placeholder="Text input">
+							<button class="btn btn-danger btn-lg" type="submit">Submit</button>
+						</form>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<section>
+					<h1>Watch List</h1>
+					<div>
+						<div id="watch-list"></div>
+					</div>
+				</section>	
+			</div>
+		</div>
+	</div>
 	</main>
 </body>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
