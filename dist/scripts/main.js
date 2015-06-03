@@ -63,39 +63,6 @@ $(document).ready(function() {
 		};
 
 
-	$('#new-search-form').on('submit', function(e) {
-		e.preventDefault();
-		var query = $('#newQuery').val();
-		var movieSelection = '';
-
-		myRouter.navigate('search/new/'+query, {trigger: true});
-
-		var watchList = [];
-		var moviesToWatch = [];
-
-
-		function onReceivedMovies(movies) {
-			console.log(onReceivedMovies);
-			console.log(movies);
-			console.log(movies.Search[0].Title);
-		
-			for(var i=0;i<movies.Search.length;i++) {
-				var $movieSearch = $('<div>'+movies.Search[i].Title+'</div>');
-				watchList.push($movieSearch);
-				console.log(watchList);
-			}
-
-			$('#search').append(watchList);
-
-			for(var i=0; i<watchList.length; i++) {
-				watchList[i].on('click', function(e) {
-				moviesToWatch.push($(this));
-				$('#watch-list').append(moviesToWatch);
-				});
-
-				console.log(moviesToWatch);
-			}
-		};
 		
 
 
