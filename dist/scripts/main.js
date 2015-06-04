@@ -20,6 +20,7 @@ $(document).ready(function() {
 		newSearch: function(query) {
 			$('#home').hide();
 			$('#search').show();
+
 		}
 
 	});
@@ -43,8 +44,6 @@ $(document).ready(function() {
 			console.log(onReceivedMovies);
 			console.log(movies);
 			console.log(movies.Search[0].Title);
-
-
 		
 			for(var i=0;i<movies.Search.length;i++) {
 				var $movieSearch = $('<div>'+movies.Search[i].Title+'</div>');
@@ -67,16 +66,15 @@ $(document).ready(function() {
 			}
 
 			$.get(
-			'http://www.omdbapi.com',
-			{
-				s: query,
-				type: 'movie'
-			},
-			onReceivedMovies,
-			'json'
-		);
+				'http://www.omdbapi.com',
+				{
+					s: query,
+					type: 'movie'
+				},
+				onReceivedMovies,
+				'json'
+			);
 		};
-
 	});
 
 	$('#new-search-form').on('submit', function(e) {
@@ -114,7 +112,6 @@ $(document).ready(function() {
 			$('div #watch-list').click(function(e) {
 				$(e.target).fadeOut('slow');
 			})
-
 			}
 		};
 
